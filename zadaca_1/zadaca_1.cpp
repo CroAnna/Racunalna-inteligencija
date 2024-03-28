@@ -22,7 +22,7 @@ double funkcijaA(double x)
 
 int main(void)
 {
-    unsigned long long seed = 505;
+    unsigned long long seed = chrono::high_resolution_clock::now().time_since_epoch().count();
     mt19937_64 rng(seed);
     double Xlb = 2.0;
     double Xub = 6.0;
